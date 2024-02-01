@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body{
+    background-color: #090e22;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/*Esta regra de css esconde os elementos que tiverem a clsaa hide*/
+.hide{
+    display: none !important;
+}
+
+.container{
+    min-width: 400px;
+    min-height: 400px;
+    background-color: #1d1e33;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/*IMC Form*/
+#calc-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    flex: 1; /*Com o flex 1 os inputs ocupam a laugura total da div*/
+    margin-bottom: 1rem;
+}
+
+.form-control label{
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    color: #ccc;
+    
+}
+
+.form-control input{
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+    
+}
+
+.action-control{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+button {
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    background-color: #5bd692;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.9;
+    flex: 1;
+    border-radius: 10px;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+
+/*Em css se colocarmos "#clear-btn" estamos a referenciar o id de um elemento, se for com 
+".action-control" estamos a referenciar a class*/
+
+#clear-btn{
+    background-color: #e26060;
+}
+
+/*Table*/
+#result-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#imc-number{
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+}
+
+
+#imc-info{
+    font-size: 1rem;
+    color: #ccc;
+}
+
+#result-container h3{
+    margin-top: 1rem;
+    color: #dfdfdf;
+}
+
+#imc-table{
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.table-header{
+    font-weight: bold;
+    color: #ccc;
+}
+
+.table-header, 
+.table-data{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #444;
+}
+
+.table-header h4, .table-data p{
+    flex: 1;
+}
+
+/*aqui vamos aplicar o css a um elemento filho da class, com o nth-child indicamos o número do elemento, neste caso é o 3º*/
+
+.table-header h4:nth-child(3),
+.table-data p:nth-child(3) {
+    max-width: 80px;
+}
+
+/*aqui vamos dizer ao botão voltar para não ocupar a largura total, vai fazer um ajusto do tamanho conforme o conteúdo, e começla a crescer no centro*/
+
+#back-btn{
+    align-self: center;
+}
+
+.good{
+    color: #5bd692;
+}
+
+.low{
+    color: #d6d45b;
+}
+
+.medium{
+    color: #d6ab5b;
+}
+
+.high{
+    color: #d65b5b;
+}
